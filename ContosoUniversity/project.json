@@ -1,8 +1,11 @@
 ﻿{
-  "userSecretsId": "aspnet-ContosoUniversity-4bb4b862-9b69-4926-83b7-855a4e73b014",
+  "userSecretsId": "aspnet-ContosoUniversity-1a49a3a3-718e-46c7-9cf8-660b4dde2438",
 
   "dependencies": {
-    "Microsoft.ApplicationInsights.AspNetCore": "1.0.0",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.1",
+      "type": "platform"
+    },
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
@@ -37,7 +40,7 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc":  {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
     }
@@ -58,12 +61,23 @@
   },
 
   "frameworks": {
-    "net452": { }
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ]
+    }
   },
 
   "buildOptions": {
     "emitEntryPoint": true,
     "preserveCompilationContext": true
+  },
+
+  "runtimeOptions": {
+    "configProperties": {
+      "System.GC.Server": true
+    }
   },
 
   "publishOptions": {
