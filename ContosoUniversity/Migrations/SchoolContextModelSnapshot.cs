@@ -62,6 +62,10 @@ namespace ContosoUniversity.Migrations
                     b.Property<string>("Name")
                         .HasAnnotation("MaxLength", 50);
 
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
+
                     b.Property<DateTime>("StartDate");
 
                     b.HasKey("DepartmentID");
@@ -134,8 +138,9 @@ namespace ContosoUniversity.Migrations
 
                     b.Property<DateTime>("EnrollmentDate");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("FirstMidName")
                         .IsRequired()
+                        .HasColumnName("FirstName")
                         .HasAnnotation("MaxLength", 50);
 
                     b.Property<string>("LastName")

@@ -9,6 +9,7 @@ namespace ContosoUniversity.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name ="Number")]
         public int CourseId { get; set; }
+
         [StringLength(50, MinimumLength =3, ErrorMessage ="Course title must be between 3 and 50 characters")]
         [Display(Name ="Course Title")]
         public string Title { get; set; }
