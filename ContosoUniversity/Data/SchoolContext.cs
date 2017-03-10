@@ -13,6 +13,10 @@ namespace ContosoUniversity.Data
         {
 
         }
+        public SchoolContext()
+        {
+
+        }
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
@@ -23,6 +27,8 @@ namespace ContosoUniversity.Data
         public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
         public DbSet<CourseAssignment> CourseAssignments { get; set; }
         public DbSet<Person> People { get; set; }
+
+        //public DbSet<Models.SchoolViewModels.StudentViewModel> StudentViewModels { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

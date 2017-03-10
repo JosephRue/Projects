@@ -113,11 +113,11 @@ namespace ContosoUniversity
             app.UseIdentity();
 
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
-            app.UseGoogleAuthentication(new GoogleOptions()
-            {
-                ClientId = Configuration["Authentication:Google:ClientID"],
-                ClientSecret = Configuration["Authentication:Google:ClientSecret"]
-            });
+            //app.UseGoogleAuthentication(new GoogleOptions()
+            //{
+            //    ClientId = Configuration["Authentication:Google:ClientID"],
+            //    ClientSecret = Configuration["Authentication:Google:ClientSecret"]
+            //});
 
             app.UseMvc(routes =>
             {
